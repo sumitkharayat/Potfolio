@@ -142,3 +142,12 @@ footer {
     background: #222;
     color: white;
 }
+#home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url("image/Libary.jpeg") no-repeat center center/cover;
+    color: white;
+}
