@@ -139,7 +139,7 @@ section {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: 0.3s;
     width: 60%;
-    margin: 0 auto;   /* centers the box */
+    margin: 0 ;   /* removing centering the box */
 }
 
 .project:hover {
