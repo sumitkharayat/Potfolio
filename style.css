@@ -1,4 +1,4 @@
-/* Reset */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -7,14 +7,15 @@
 }
 
 body {
-    line-height: 1.6;
-    color: #333;
     background: #f9f9f9;
+    color: #333;
+    padding-top: 80px; /* for fixed header */
 }
 
+/* HEADER */
 header {
     background: #222;
-    color: #fff;
+    color: white;
     padding: 20px;
     position: fixed;
     width: 100%;
@@ -39,49 +40,30 @@ header ul li {
 
 header ul li a {
     text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
+    color: white;
+    transition: 0.3s;
 }
 
 header ul li a:hover {
     color: #f39c12;
 }
 
+/* SECTIONS */
 section {
-    padding: 100px 20px;
-    min-height: 100vh;
+    padding: 80px 20px;
 }
 
-/* ── HOME ── */
+/* HOME */
 #home {
-    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* FIX: Removed the duplicate plain gradient rule that was overriding the image.
-       Only the background-image version is kept so Libary.jpeg shows correctly. */
-    background: url("image/Libary.jpeg") no-repeat center center / cover;
+
+    background: linear-gradient(to right, #6a11cb, #2575fc);
     color: white;
     text-align: center;
-}
-
-#home::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-#home h1,
-#home p {
-    position: relative;
-    z-index: 2;
 }
 
 #home h1 {
@@ -93,118 +75,84 @@ section {
     font-size: 1.2rem;
 }
 
-/* ── ABOUT ── */
-/* FIX: Removed #skills and #projects from this rule so their full-bleed image
-   sections are not given a white card background, border-radius, or box-shadow
-   that would conflict with their background images. */
-#about,
-#contact {
-    background: #fff;
-    margin-top: 20px;
+/* ABOUT */
+#about {
+    background: white;
     border-radius: 10px;
+    margin: 20px;
     padding: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-h2 {
-    margin-bottom: 20px;
-    color: #222;
-}
-
-/* ── SKILLS ── */
+/* SKILLS */
 #skills {
-    position: relative;
-    padding: 60px 20px;
-    /* FIX: Removed the duplicate #skills rule that appeared at the bottom of the file.
-       A single clean declaration is kept here. */
-    background: url("image/shah.jpeg") no-repeat center top / cover;
-    color: white;
-}
-
-#skills::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-}
-
-#skills * {
-    position: relative;
-    z-index: 2;
+    background: #f4f6f9;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 40px;
 }
 
 .skills-list {
     display: flex;
-    gap: 15px;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .skills-list span {
     background: #2575fc;
-    color: #fff;
-    padding: 8px 15px;
-    border-radius: 20px;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
     font-size: 0.9rem;
+    transition: 0.3s;
 }
 
-/* ── PROJECTS ── */
+.skills-list span:hover {
+    background: #6a11cb;
+}
+
+/* PROJECTS */
 #projects {
-    position: relative;
-    padding: 60px 20px;
-    /* FIX: Removed the duplicate #projects rule that appeared at the bottom of the file.
-       A single clean declaration is kept here. */
-    background: url("image/suitcase.jpeg") no-repeat center top / cover;
-    color: white;
-}
-
-/* FIX: Removed the first duplicate #projects::before block that appeared earlier
-   in the original file. Only one ::before pseudo-element is needed. */
-#projects::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-}
-
-#projects * {
-    position: relative;
-    z-index: 2;
-}
-
-#projects h2 {
-    color: white;
+    background: white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 40px;
 }
 
 .projects-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
 .project {
-    background: rgba(255, 255, 255, 0.9);
-    color: black;
+    background: white;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
-/* ── CONTACT ── */
+.project:hover {
+    transform: translateY(-5px);
+}
+
+/* CONTACT */
+#contact {
+    background: #f4f6f9;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 40px;
+}
+
 form input,
 form textarea,
 form button {
     width: 100%;
     margin: 10px 0;
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 form button {
@@ -219,10 +167,11 @@ form button:hover {
     background: #6a11cb;
 }
 
-/* ── FOOTER ── */
+/* FOOTER */
 footer {
-    text-align: center;
-    padding: 20px;
     background: #222;
     color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
 }
