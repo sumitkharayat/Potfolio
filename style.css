@@ -1,4 +1,167 @@
-/* HOME */
+ /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background: #f9f9f9;
+}
+
+header {
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: #f39c12;
+}
+
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#home p {
+    font-size: 1.2rem;
+}
+
+#about,
+#skills,
+#projects,
+#contact {
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.skills-list {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.skills-list span {
+    background: #2575fc;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+#projects h2 {
+    color: white;
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.9); /* light background */
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#projects::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.7); /* darker overlay */
+    z-index: 1;
+}
+
+#projects * {
+    position: relative;
+    z-index: 2;
+}
+
+form button {
+    background: #2575fc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #6a11cb;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
 #home {
     position: relative;
     height: 100vh;
@@ -12,13 +175,16 @@
     color: white;
     text-align: center;
 }
-
 #home::before {
     content: "";
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+
     background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 #home h1,
@@ -27,22 +193,24 @@
     z-index: 2;
 }
 
-
-/* SKILLS */
 #skills {
     position: relative;
-    padding: 100px 20px;
+    padding: 60px 20px;
 
-    background: url("image/shah.jpeg") no-repeat center top/cover;
+    background: url("image/shah.jpeg") no-repeat center center/cover;
     color: white;
 }
 
 #skills::before {
     content: "";
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+
     background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 #skills * {
@@ -50,44 +218,34 @@
     z-index: 2;
 }
 
-
-/* PROJECTS */
 #projects {
     position: relative;
-    padding: 100px 20px;
+    padding: 60px 20px;
 
-    background: url("image/suitcase.jpeg") no-repeat center top/cover;
+    background: url("image/suitcase.jpeg") no-repeat center center/cover;
     color: white;
 }
 
 #projects::before {
     content: "";
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 #projects * {
     position: relative;
     z-index: 2;
 }
-
-
-/* PROJECT LAYOUT */
-.projects-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+#skills {
+    background: url("image/shah.jpeg") no-repeat center top/cover;
 }
 
-#projects h2 {
-    color: white;
-}
-
-.project {
-    background: rgba(255, 255, 255, 0.9);
-    color: black;
-    padding: 20px;
-    border-radius: 10px;
+#projects {
+    background: url("image/suitcase.jpeg") no-repeat center top/cover;
 }
