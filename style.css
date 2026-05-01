@@ -80,11 +80,6 @@ section {
 }
 
 /* SKILLS */
-#skills {
-    position: relative;
-    background: url("image/shah.jpeg") no-repeat center top/cover;
-    color: white;
-}
 
 #skills::before {
     content: "";
@@ -111,13 +106,12 @@ section {
     padding: 8px 15px;
     border-radius: 20px;
 }
-
-/* PROJECTS */
-#projects {
-    position: relative;
-    background: url("image/suitcase.jpeg") no-repeat center top/cover;
-    color: white;
+#skills {
+    background: #f4f6f9;
+    color: #222;
 }
+/* PROJECTS */
+
 
 #projects::before {
     content: "";
@@ -145,7 +139,10 @@ section {
     padding: 20px;
     border-radius: 10px;
 }
-
+#projects {
+    background: #f9f9f9;
+    color: #222;
+}
 /* Contact */
 form input, form textarea, form button {
     width: 100%;
